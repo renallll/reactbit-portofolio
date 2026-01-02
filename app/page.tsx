@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Lanyard from "./components/lanyard";
 import RotatingText from "./components/RotatingText";
 import SplitText from "./components/SplitText";
@@ -9,7 +10,7 @@ import GradientText from "./components/GradientText";
 import CircularText from "./components/CircularText";
 import ScrollVelocity from "./components/ScrollVelocity";
 import { Timeline } from "./components/timeline";
-import Link from "next/link";
+
 
 export default function Home() {
   return (
@@ -106,7 +107,7 @@ export default function Home() {
                   direction="top"
                   className="text-xl mb-8"
                 />
-                <div className="flex items-center">
+                <div className="flex items-center gap-4">
                 <Link
                   href="https://www.linkedin.com/in/rhenaldnainggolan/"
                   target="_blank"
@@ -121,7 +122,7 @@ export default function Home() {
                   </GradientText>
                 </Link>
                 <Link
-                  href="https://www.linkedin.com/in/rhenaldnainggolan/"
+                  href="https://www.instagram.com/renal.a.n"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -134,7 +135,7 @@ export default function Home() {
                   </GradientText>
                 </Link>
                 <Link
-                  href="https://www.linkedin.com/in/rhenaldnainggolan/"
+                  href="https://github.com/renallll"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
