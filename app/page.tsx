@@ -9,6 +9,7 @@ import GradientText from "./components/GradientText";
 import CircularText from "./components/CircularText";
 import ScrollVelocity from "./components/ScrollVelocity";
 import { Timeline } from "./components/timeline";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -106,6 +107,11 @@ export default function Home() {
                   className="text-xl mb-8"
                 />
                 <div className="flex items-center">
+                <Link
+                  href="https://www.linkedin.com/in/rhenaldnainggolan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <GradientText
                     animationSpeed={3.5}
                     showBorder
@@ -113,6 +119,33 @@ export default function Home() {
                   >
                     Linkedin
                   </GradientText>
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/rhenaldnainggolan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GradientText
+                    animationSpeed={3.5}
+                    showBorder
+                    className="px-6 py-4 rounded-lg"
+                  >
+                    Instagram
+                  </GradientText>
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/rhenaldnainggolan/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GradientText
+                    animationSpeed={3.5}
+                    showBorder
+                    className="px-6 py-4 rounded-lg"
+                  >
+                    Github
+                  </GradientText>
+                </Link>
                 </div>
               </div>
             </div>
