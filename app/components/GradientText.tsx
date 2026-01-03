@@ -16,7 +16,13 @@ interface GradientTextProps {
 export default function GradientText({
   children,
   className = '',
-  colors = ['#5227FF', '#FF9FFC', '#B19EEF'],
+  colors = [
+    '#F5F7FA', // silver sangat terang (flash)
+    '#E4E7EC', // silver muda
+    '#C9CED6', // silver utama
+    '#AEB4BE', // silver gelap lembut
+    '#FFFFFF'  // kilat putih (spark)
+  ],
   animationSpeed = 8,
   showBorder = false,
   direction = 'horizontal',

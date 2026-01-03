@@ -8,7 +8,7 @@ import AnimatedContent from "./components/AnimatedContent";
 import Squares from "./components/Squares";
 import GradientText from "./components/GradientText";
 import CircularText from "./components/CircularText";
-import ScrollVelocity from "./components/ScrollVelocity";
+import Dock from "./components/Dock";
 import { Timeline } from "./components/timeline";
 
 
@@ -24,23 +24,23 @@ export default function Home() {
           hoverFillColor='#75D500'
         />
       </div>      
-      <div className="container mx-auto h-screen">
-        <div className="grid grid-cols-12">
-          <div className="col-span-6 relative">
+      <div className="container mx-auto min-h-screen py-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12">
+          <div className="hidden lg:block col-span-6 relative">
             <Lanyard 
               position={[0, 0, 12]} 
               gravity={[0, -40, 0]}
               />
-            <div className="absolute top-10 right-10 z-50">
+          <div className="hidden lg:block absolute top-10 right-10 z-50">
               <CircularText
-                text="RHENALD*ADRIAN*NAINGGOLAN*"
+                text="RHENALD ✦ ADRIAN ✦ NAINGGOLAN ✦ "
                 onHover="speedUp"
                 spinDuration={20}
                 className=""
               />
             </div>
           </div> 
-          <div className="col-span-6">
+          <div className="lg:col-span-6">
             <div className="flex items-center h-full">
               <div className="flex flex-col gap-6">
                 <AnimatedContent 
@@ -56,7 +56,7 @@ export default function Home() {
                   delay={0.3}
                 >
                   <div className="flex items-center gap-2">
-                    <h1 className="text-2xl font-bold text-white">I'm Ready To Work</h1>
+                    <h1 className="text-2xl font-bold text-white">Colab with me</h1>
                       <RotatingText
                         texts={['Web Development', 'Data Analytics', 'Software Engineering', 'UI/UX Design']}
                         mainClassName="px-2 sm:px-2 md:px-3 bg-[#75D500] text-black overflow-hidden py-0.5 sm:py-1 justify-center rounded-lg text-2xl font-bold inline-flex transition-all"
@@ -75,7 +75,7 @@ export default function Home() {
               <div className="flex flex-col items-start">
                 <SplitText
                   text="Rhenald Nainggolan"
-                  className="text-6xl font-semibold text-start"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-start"
                   delay={50}
                   duration={0.6}
                   ease="power3.out"
@@ -88,7 +88,7 @@ export default function Home() {
                 />
                 <SplitText
                   text="Software Engineering"
-                  className="text-6xl font-semibold text-start text-[#75D500]"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-start text-[#75D500]"
                   delay={80}
                   duration={0.6}
                   ease="power3.out"
@@ -114,9 +114,16 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <GradientText
+                    colors = {[
+                      '#0A66C2',
+                      '#0077B5',
+                      '#0084BF',
+                      '#00A0DC',
+                      '#0A66C2'
+                    ]}
                     animationSpeed={3.5}
                     showBorder
-                    className="px-6 py-4 rounded-lg"
+                    className="px-4 py-2 sm:px-6 sm:py-4 rounded-lg"
                   >
                     Linkedin
                   </GradientText>
@@ -127,9 +134,16 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <GradientText
+                    colors = {[
+                      '#F58529',
+                      '#DD2A7B',
+                      '#8134AF',
+                      '#515BD4',
+                      '#F58529'
+                    ]}
                     animationSpeed={3.5}
                     showBorder
-                    className="px-6 py-4 rounded-lg"
+                    className="px-4 py-2 sm:px-6 sm:py-4 rounded-lg"
                   >
                     Instagram
                   </GradientText>
@@ -140,11 +154,38 @@ export default function Home() {
                   rel="noopener noreferrer"
                 >
                   <GradientText
+                    colors = {[
+                      '#F5F7FA', // silver terang (flash)
+                      '#E4E7EC', // silver muda
+                      '#C9CED6', // silver utama
+                      '#FFFFFF', // kilat putih
+                      '#F5F7FA'  // loop halus
+                    ]}
                     animationSpeed={3.5}
                     showBorder
-                    className="px-6 py-4 rounded-lg"
+                    className="px-4 py-2 sm:px-6 sm:py-4 rounded-lg"
                   >
                     Github
+                  </GradientText>
+                </Link>
+                <Link
+                  href="https://wa.me/qr/6QBDQPT3TB4TF1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GradientText
+                    colors = {[
+                      '#25D366',
+                      '#1EBEA5',
+                      '#20C997',
+                      '#128C7E',
+                      '#25D366'
+                    ]}
+                    animationSpeed={3.5}
+                    showBorder
+                    className="px-4 py-2 sm:px-6 sm:py-4 rounded-lg"
+                  >
+                    Whatsapp
                   </GradientText>
                 </Link>
                 </div>
@@ -153,10 +194,7 @@ export default function Home() {
           </div>
         </div>
       </div>      
-        <ScrollVelocity
-          texts={['Software Engineering', 'Web Developer']} 
-        />
-      
+       
     </div>
   );
 }
